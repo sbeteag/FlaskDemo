@@ -15,7 +15,8 @@ index = Page("index",
 what = Page("what",
             "What is Flask?",
             "Flask is a Python web framework. It is considered a micro-framework, meaning that it has little to no"
-            " dependencies on external libraries. It is used to build web applications",
+            " dependencies on external libraries. It is used to build web applications.<br><br>It was initially "
+            "released April 1, 2010, but it still on version 0.12.2. As of mid 2016, it was the most popular Python web development framework on GitHub.<br><br><a href='http://flask.pocoo.org/community/poweredby/'>Powered by Flask</a>",
             img="static/flask.png")
 
 why = Page("why",
@@ -37,6 +38,14 @@ jinja = Page("jinja",
              "just 2 files for multiple pages.",
              img="static/jinja-logo.png")
 
+django = Page("django",
+              "Flask vs Django",
+              "Django is another popular Python framework. Flask is much more 'modular', meaning that it is pretty "
+              "bare but has modules that can be added as they're needed. Django is used on bigger projects (Pinterest, NASA, instagram) but many sites use Flask for their APIs.<hr>Django Hello World"
+              "<img class='img-responsive' src='static/djangoHello.PNG'><hr>Flask Hello World"
+              "<img class='img-responsive' src='static/flaskHello.PNG'>",
+              img="static/flask.png")
+
 p404 = Page("missing",
             "Page not found",
             "The URL you entered does not exist.")
@@ -44,9 +53,10 @@ p404 = Page("missing",
 pages = {"what": what,
          "why": why,
          "jinja": jinja,
-         "home": index}
+         "home": index,
+         "django": django}
 
-nav = ['Home', 'What', 'Why', 'Jinja']  # , 'Hello']
+nav = ['Home', 'What', 'Why', 'Jinja', 'Django']  # , 'Hello']
 
 
 @app.route('/')
