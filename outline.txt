@@ -1,0 +1,13 @@
+Home Page
+What
+Why
+
+page.py
+
+Jinja2
+base.jinja2
+html_dependencies.jinja2
+    Bootstrap Navbar
+
+add hello to nav
+show hello/string

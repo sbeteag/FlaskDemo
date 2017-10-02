@@ -1,0 +1,46 @@
+{% extends 'base.jinja2' %}
+{% block title %}{{ page.title }}{% endblock %}
+
+{% block navbar %}
+    <nav class="navbar navbar-default navbar-fixed-top" style="border-bottom: 2px solid black;">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/home" title="home"><strong>Flask Demo</strong></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    {% for item in nav %}
+                        <li><a href="{{ '/' + item.lower() }}">{{ item }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+{% endblock %}
+
+{% block body %}
+    {% if page.img %}
+        <div>
+            <img class="img-responsive" align="center" src={{ page.img }}>
+        </div>
+        <hr>
+    {% endif %}
+    <div class="page-header text-left">
+        <h1>{{ page.title }}</h1>
+    </div>
+    <p>{{ page.body }}</p>
+    {% if page.list %}
+        <ul>
+            {% for item in page.list %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}
