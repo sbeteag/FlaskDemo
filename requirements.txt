@@ -1,11 +1,11 @@
 aniso8601==1.3.0
 click==6.7
-Flask==0.12.2
+Flask==0.12.3
 Flask-RESTful==0.3.6
 itsdangerous==0.24
 Jinja2==2.9.6
 MarkupSafe==1.0
-marshmallow==2.13.6
+marshmallow==2.15.1
 olefile==0.44
 PIL==1.1.7
 Pillow==4.2.1
